@@ -1,13 +1,24 @@
-import { Text, StatusBar } from "react-native";
+import { Text, StatusBar, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-white">
-      <Text className={"text-red-500"}>
-        Open up App.js to start working on your app!
-      </Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>Uber Clone!</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
+
+// Define styles using StyleSheet
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center", // Centers vertically
+    alignItems: "center", // Centers horizontally
+    backgroundColor: "white",
+  },
+  text: {
+    fontSize: 16,
+  },
+});
